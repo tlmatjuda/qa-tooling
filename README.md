@@ -19,7 +19,7 @@ The technology stack used in the project is :
 * Selenium 4.7.2
 * [](https://)Project Lombok
 * Apache Commons ( for Text, Collections utilities )
-* Googel Guava ( Utilities )
+* Google Guava ( Utilities )
 
 </br>
 
