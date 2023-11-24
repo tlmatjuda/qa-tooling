@@ -3,7 +3,10 @@ package com.toob.qautomation.integration;
 
 import io.cucumber.spring.CucumberContextConfiguration;
 import lombok.extern.slf4j.Slf4j;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 
@@ -18,12 +21,17 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
  */
 @Slf4j
 @CucumberContextConfiguration
-@SpringBootTest( webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest
 public class CucumberSpringIntegration {
 
+    @Value("${qa.tooling.web.driver.target.url}")
+    protected String targetWebUrl;
+
+    @Value("${qa.tooling.web.driver.wait-timeout-seconds}")
+    protected int waitTimeOutSeconds;
+
+
     @Autowired
-    public TestRestTemplate restTemplate;
-
-
+    protected WebDriver webDriver;
 
 }
