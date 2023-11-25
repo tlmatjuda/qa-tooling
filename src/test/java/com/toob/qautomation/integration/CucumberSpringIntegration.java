@@ -30,8 +30,8 @@ public class CucumberSpringIntegration {
     @Value("${qa.tooling.web.driver.wait-timeout-seconds}")
     protected int waitTimeOutSeconds;
 
-
-    @Autowired
-    protected WebDriver webDriver;
+//
+//    @Autowired
+//    protected WebDriver webDriver;
 
 }

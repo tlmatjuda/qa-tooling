@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Scope;
 public class QaToolingConfiguration {
 
     @Bean
-    public WebDriver webDriver() {
+    public WebDriver chromeDriver() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");

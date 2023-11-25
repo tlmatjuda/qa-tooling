@@ -1,9 +1,8 @@
-Feature: Google Search Functionality
-  This feature contains a list of functionalities related to Google Searching
+Feature: Google Search
 
-  Scenario: Search for Mix Telematics
+  Scenario: Perform a Google search
+    Given I open the Google search page
+    When I perform a search with the keyword "Selenium WebDriver"
+    And I click the search button
+    Then I should see search results page
 
-    Given That the web page is loaded
-    When I type in the search box
-    And Click the "Google Search" button
-    Then I will get results of what I searched for
